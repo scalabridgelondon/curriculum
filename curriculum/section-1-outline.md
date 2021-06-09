@@ -46,3 +46,5 @@ Students:
 - Structural Recursion over the Natural Numbers
 
 - Fractals
+  - Reinforces reasoning principles for (structural) recursion
+  - Open-ended project to finish this section 
