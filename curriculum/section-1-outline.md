@@ -40,8 +40,14 @@ Students:
   - Use names to build more complex pictures
 
 - The Substitution Model of Evaluation
+  - Describe substitution
+  - Show how expressions can be evaluated by substitution
+  - Define side effects in terms of substitution
+  - Show how side effects can be used to investigate order of evaluation
 
 - Methods
+  - Defining methods
+  - Substitution model for methods
 
 - Structural Recursion over the Natural Numbers
 
