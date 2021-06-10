@@ -49,7 +49,7 @@ The [model liberal arts curriculum](http://cs.wellesley.edu/~pmetaxas/LACS2007re
 
 ## Next Steps
 
-Our open issues indicate what we're currently working on.
+Our open issues indicate what we're currently working on. We also have a [mind map on Miro](https://miro.com/app/board/o9J_l_oM4d4=/) documenting the scope we're intending to cover.
 
 
 ## Participation
