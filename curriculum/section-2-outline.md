@@ -5,11 +5,15 @@ Section 2
 
 ## Goals
 
-- Experience with core language features in Scala
-  - pattern matching (expanding from Section 1)
-  - functions
-  - type variables (using but not defining)
-  - sealed traits and final case classes (enum in Scala 3)
-- Understand structural recursion in the general case
+Students can:
+
+- declare and use functions and function types
+- understand type signatures with generic types
+- apply structural recursion over `List`
+- maybe map and flatMap?
+- translate descriptions of data into algebraic data types
+- apply structural recursion over algebraic data types
+
+
 
 ## Content

@@ -14,6 +14,7 @@ Students:
 - can read and write basic Scala syntax
 - can use the substitution model of evaluation to reason about pure code
 - can write programs that use structural recursion over the natural numbers
+- can reason effectively about structural recursion
 
 
 ## Content
