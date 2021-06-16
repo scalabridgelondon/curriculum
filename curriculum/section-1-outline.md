@@ -51,6 +51,7 @@ Students:
   - Substitution model for methods
 
 - Structural Recursion over the Natural Numbers
+  - Introduction to pattern matching
 
 - Fractals
   - Reinforces reasoning principles for (structural) recursion

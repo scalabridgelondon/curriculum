@@ -14,6 +14,7 @@ Programming consists of more than writing code. Other aspects can be divided int
 
 1. Processes, such as pair programming, debugging, and testing.
 2. Tools, such as version control, sbt, and IDE.
+3. Style
 
 Consider if there is an opportunity to touch on these aspects.
 
@@ -36,6 +37,8 @@ The [linked post][primm] goes into more detail; there is no point in repeating i
 ## Learning with Others
 
 Working in groups
+- peer learning
+- presentations
 
 
 ## Clear Guidance
