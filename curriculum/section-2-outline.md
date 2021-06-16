@@ -22,3 +22,12 @@ Students can:
 
 - Functions
   - This is currently introduced in Creative Scala using parametric equations for curves. This is fun, but requires explaining some concepts (polar coordinates, parametric equations) that are unfamiliar to some students. An alternative would be to implement a library for common tilings (e.g. square, hexagon)
+
+- List
+  - structural recursion over Lists
+  - abstraction over structural recursion: map, flatMap
+  
+- Maybe introduce Random here? Same concepts but different context.
+  
+- Algebraic data types
+  - structural recursion over algebraic data types
