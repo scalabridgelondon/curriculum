@@ -49,10 +49,18 @@ Students:
 - Methods
   - Defining methods
   - Substitution model for methods
+  - Methods abstract over expressions
+  - At this point we could ask some questions about substitution that illustrate the difference between eager and lazy evaluation, and also introduce recursion.
 
 - Structural Recursion over the Natural Numbers
   - Introduction to pattern matching
+  - First example of programming strategy: structure of data matches structure of code---structural recursion
 
 - Fractals
   - Reinforces reasoning principles for (structural) recursion
   - Open-ended project to finish this section 
+
+
+## Notes
+
+Most of this material already exists in Creative Scala. The installation section of Creative Scala is out of date, however.
