@@ -47,10 +47,23 @@ Students:
   - Show how side effects can be used to investigate order of evaluation
 
 - Methods
-  - Defining methods
-  - Substitution model for methods
-  - Methods abstract over expressions
-  - At this point we could ask some questions about substitution that illustrate the difference between eager and lazy evaluation, and also introduce recursion.
+  - Motivation: Methods allow generalization over expressions. We can allow parts of an expression to vary, replacing them with the value of method parameters.
+  - Method syntax
+    - Scala 2
+    - Scala 3
+    - Terminology: parameters & arguments, declaration and application, free and bound names
+  - Method semantics
+    - Substitution model for methods
+      - Only substitute in value position. 
+      ```scala
+      def example(x: Int): Int = foo.x(x) // which x do we substitute?
+      ```
+  - Questions
+    - What is the difference between a method with no parameters and a value? Do methods without parameters have any use? If so, when?
+    - Call-by-value vs call-by-name
+      - Call-by-name sometimes halts when call-by-value does not
+    - Methods that call themselves
+    - Mutually recursive methods
 
 - Structural Recursion over the Natural Numbers
   - Introduction to pattern matching
