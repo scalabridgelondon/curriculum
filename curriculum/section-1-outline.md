@@ -47,17 +47,27 @@ Students:
   - Show how side effects can be used to investigate order of evaluation
 
 - Methods
-  - Motivation: Methods allow generalization over expressions. We can allow parts of an expression to vary, replacing them with the value of method parameters.
+  - Motivation: Methods allow generalization over expressions. We can represent
+    a set of expressions with a method, with parameters representing the part of
+    the expression that varies.
   - Method syntax
     - Scala 2
     - Scala 3
     - Terminology: parameters & arguments, declaration and application, free and bound names
   - Method semantics
     - Substitution model for methods
+      - Substitute a method call with the value it evaluates to (big step)
+      - Small step: replace method call with method body, substituting
+        parameters with the expressions (or is it the values?!?) they are called
+        with
       - Only substitute in value position. 
       ```scala
       def example(x: Int): Int = foo.x(x) // which x do we substitute?
       ```
+      - Maybe mention capture-avoiding substitution?
+  - Process
+    - A method is a contract: give me these inputs and I will give you this output. Another mental model for methods.
+    - This motivates a process for writing methods. What is the contract? What are specific instances of that contract?
   - Questions
     - What is the difference between a method with no parameters and a value? Do methods without parameters have any use? If so, when?
     - Call-by-value vs call-by-name
