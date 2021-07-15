@@ -1,3 +1,11 @@
+package section1.methods
+
+import mads.*
+
+trait GroupActivities[A](mads: Mads[A]):
+  import mads.syntax.*
+  
+  val content = md"""
 # Methods: Group Activities
 
 
@@ -34,3 +42,4 @@ Returning to the `mystery` method, which part of the method is responsible for:
 
 What value(s) does the value `c2` depend on?
 What value(s) does the value `c3` depend on?
+"""
