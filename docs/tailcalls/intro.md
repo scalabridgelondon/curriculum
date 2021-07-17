@@ -1,11 +1,13 @@
+package scalabridge
 package tailcalls
 
 import mads.*
 
-trait Intro[A](mads: Mads[A]) {
-  import mads.syntax.*
+object Intro extends Section:
+  def content[A](mads: Mads[A]): A = 
+    import mads.syntax.*
 
-  val content = md"""
+    md"""
 # Introduction
 
 In this section we'll learn about *tail calls*. Knowing about tail calls is
@@ -19,4 +21,3 @@ Here's the plan:
 - We'll introduce tail calls, and the `@tailcall` annotation in Scala, to solve the problem; and
 - Finally, we'll discuss some of the more advanced techniques associated with tail calls.
 """
-}

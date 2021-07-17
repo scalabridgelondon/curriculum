@@ -1,11 +1,13 @@
+package scalabridge
 package section1.methods
 
 import mads.*
 
-trait GroupActivities[A](mads: Mads[A]):
-  import mads.syntax.*
+object GroupActivities extends Section:
+  def content[A](mads: Mads[A]): A =
+    import mads.syntax.*
   
-  val content = md"""
+    md"""
 # Methods: Group Activities
 
 

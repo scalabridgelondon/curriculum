@@ -1,11 +1,13 @@
+package scalabridge
 package section1.methods
 
 import mads.*
 
-trait Methods[A](mads: Mads[A]):
-  import mads.syntax.*
+object Methods extends Section
+  def content[A](mads: Mads[A]): A =
+    import mads.syntax.*
   
-  val content = md"""
+    md"""
 # Methods
 
 """

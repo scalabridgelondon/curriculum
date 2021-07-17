@@ -1,11 +1,13 @@
+package scalabridge
 package tailcalls
 
 import mads.*
 
-trait Problem[A](mads: Mads[A]) {
-  import mads.syntax.*
+object Problem extends Section:
+  def content[A](mads: Mads[A]): A = 
+    import mads.syntax.*
 
-  val content = md"""
+    md"""
 # The Problem That Tail Calls Solve
 
 Let's start with an example. We'll right some simple code to sum the elements in
@@ -33,8 +35,31 @@ However, look at what happens when call it with a very large list.
 // This creates a list with one hundred thousand elements
 val bigList = List.fill(100000)(1)
 ```
-```scala mdoc:crash
+```scala
 sumOfList(bigList)
+// java.lang.StackOverflowError
+// 	at scala.collection.immutable.List.equals(List.scala:612)
+//    <Lots more output that we have deleted>
 ```
+
+We get a `StackOverflowError` which crashes the program. We will see this
+problem in many recursive programs when working on large data. Luckily we can
+solve this with a tail recursive method! Here's an example.
+
+```scala mdoc:silent
+def sumOfListTailRec(list: List[Int], total: Int): Int =
+  list match {
+    case Nil => total
+    case hd :: tl => sumOfListTailRec(tl, total + hd) 
+  }
+```
+
+When we call this method with `bigList` it works as expected.
+
+```scala
+sumOfListTailRec(bigList, 0)
+```
+
+Let first discuss why this problem occurs, and then move on to defining tail
+recursion.
 """
-}
