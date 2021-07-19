@@ -36,19 +36,6 @@ def mdToScala(file: File, srcPath: File, destPath: File): File = {
   changeExtension(changePath(file, srcPath, destPath), "md", "scala")
 }
 
-val build = taskKey[Unit]("Build all the curriculum material")
-build := {
-  import sbt.io._
-
-  val _ = mdoc.toTask("").value
-  val src = sourceDirectory.value / "main" / "scala"
-  val mdFiles = PathFinder(mdocOut.value).**("*.md")
-  IO.copy(mdFiles.get.map(input => (input, mdToScala(input, mdocOut.value, src))), CopyOptions().withOverwrite(true))
-  val scalaFiles = PathFinder(mdocOut.value).**("*.scala")
-  IO.copy(scalaFiles.get.map(input => (input, changePath(input, mdocOut.value, src))), CopyOptions().withOverwrite(true))
-}
-
-
 val cleanBuild = taskKey[Unit]("Clean up artifacts produced by build")
 cleanBuild := {
   import sbt.io._
@@ -58,4 +45,18 @@ cleanBuild := {
   IO.delete(mdFiles.get.map(file => mdToScala(file, mdDir, srcDir)))
   val scalaFiles = PathFinder(mdocOut.value).**("*.scala")
   IO.delete(scalaFiles.get.map(file => changePath(file, mdDir, srcDir)))
+}
+
+val build = taskKey[Unit]("Build all the curriculum material")
+build := {
+  import sbt.io._
+
+  cleanBuild.value
+  mdoc.toTask("").value
+
+  val src = sourceDirectory.value / "main" / "scala"
+  val mdFiles = PathFinder(mdocOut.value).**("*.md")
+  IO.copy(mdFiles.get.map(input => (input, mdToScala(input, mdocOut.value, src))), CopyOptions().withOverwrite(true))
+  val scalaFiles = PathFinder(mdocOut.value).**("*.scala")
+  IO.copy(scalaFiles.get.map(input => (input, changePath(input, mdocOut.value, src))), CopyOptions().withOverwrite(true))
 }

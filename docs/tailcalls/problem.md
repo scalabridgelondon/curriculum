@@ -3,13 +3,11 @@ package tailcalls
 
 import mads.*
 
-object Problem extends Section:
+object Problem extends Section("The Problem that Tail Calls Solve"):
   def content[A](mads: Mads[A]): A = 
     import mads.syntax.*
 
     md"""
-# The Problem That Tail Calls Solve
-
 Let's start with an example. We'll right some simple code to sum the elements in
 a list of numbers. At this point you should recognize a structural recursion
 over a list.

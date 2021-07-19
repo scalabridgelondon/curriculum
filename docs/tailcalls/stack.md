@@ -3,13 +3,11 @@ package tailcalls
 
 import mads.*
 
-object Stack extends Section:
+object Stack extends Section("The Stack"):
   def content[A](mads: Mads[A]): A = 
     import mads.syntax.*
 
     md"""
-# The Stack
-
 In the previous section we saw a recursive method that failed with a
 `StackOverflowError` when working with large data. In this section we'll learn
 about the stack and why this error occurs.

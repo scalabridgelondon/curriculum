@@ -3,14 +3,11 @@ package section1.methods
 
 import mads.*
 
-object GroupActivities extends Section:
+object GroupActivities extends Section("Group Activities"):
   def content[A](mads: Mads[A]): A =
     import mads.syntax.*
   
     md"""
-# Methods: Group Activities
-
-
 ## 1. Investigating Methods
 
 Read the code for the method `mystery` below. Discuss in your group what you think the method does, *without* running the code. 

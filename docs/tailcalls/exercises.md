@@ -3,14 +3,11 @@ package tailcalls
 
 import mads.*
 
-object Exercises extends Section:
+object Exercises extends Section("Exercises"):
   def content[A](mads: Mads[A]): A = 
     import mads.syntax.*
 
     md"""
-# Exercises
-
-
 Rewrite to use tail recursion
 
 product of elements in a List

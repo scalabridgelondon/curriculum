@@ -3,13 +3,11 @@ package tailcalls
 
 import mads.*
 
-object Intro extends Section:
+object Intro extends Section("Introduction"):
   def content[A](mads: Mads[A]): A = 
     import mads.syntax.*
 
     md"""
-# Introduction
-
 In this section we'll learn about *tail calls*. Knowing about tail calls is
 important for creating code that works on large amounts of data, or when
 performance is important, but it isn't a concern in most day-to-day programming.

@@ -3,13 +3,11 @@ package tailcalls
 
 import mads.*
 
-object TailCalls extends Section:
+object TailCalls extends Section("Tail Calls"):
   def content[A](mads: Mads[A]): A = 
     import mads.syntax.*
 
     md"""
-# Tail Calls
-
 We've just learned about the stack and seen that long recursive calls can cause
 it to run out of space. However, we know we can solve this problem with what is
 called a tail recursive method. Here's the example we saw earlier.
